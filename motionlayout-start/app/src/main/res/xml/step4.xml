@@ -19,7 +19,7 @@
              xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- A transition describes an animation via start and end state -->
     <Transition
-            
+
             app:constraintSetStart="@+id/start"
             app:constraintSetEnd="@+id/end"
             app:duration="3000">
@@ -30,12 +30,25 @@
 
         <KeyFrameSet>
             <KeyPosition
+                app:framePosition="25"
+                app:motionTarget="@id/moon"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+            />
+
+            <KeyPosition
                     app:framePosition="50"
                     app:motionTarget="@id/moon"
                     app:keyPositionType="parentRelative"
                     app:percentY="0.5"
             />
-            <!-- TODO: Add two more KeyPositions to the KeyFrameSet here -->
+
+            <KeyPosition
+                    app:framePosition="75"
+                    app:motionTarget="@id/moon"
+                    app:keyPositionType="parentRelative"
+                    app:percentY="0.6"
+            />
 
         </KeyFrameSet>
     </Transition>
@@ -44,7 +57,7 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@id/moon"
-            
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
