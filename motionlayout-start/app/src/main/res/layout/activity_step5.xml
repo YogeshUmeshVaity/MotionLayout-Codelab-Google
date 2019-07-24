@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutDescription="@xml/step5"
-        android:background="@drawable/m_eightyone"
+        android:background="#87ceeb"
         app:motionDebug="SHOW_PATH">
 
     <ImageView

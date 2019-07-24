@@ -49,10 +49,17 @@
             />
 
             <!-- KeyAttributes to rotate and resize @id/moon -->
+            <!--Experiment:
+                visibility - doesn't make any difference
+                rotationX - rotates the image along X axis
+                rotationY - rotates the image along Y axis
+                -->
+
             <KeyAttribute
                     app:framePosition="50"
                     app:motionTarget="@id/moon"
-                    android:rotation="-360"
+                    android:rotationX="-360"
+                    android:rotationY="-360"
                     android:scaleX="2.0"
                     android:scaleY="2.0"
             />
@@ -60,7 +67,8 @@
             <KeyAttribute
                     app:framePosition="100"
                     app:motionTarget="@id/moon"
-                    android:rotation="-720"
+                    android:rotationX="-720"
+                    android:rotationY="-720"
             />
 
             <!-- KeyAttribute to delay the appearance of @id/credits -->
