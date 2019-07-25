@@ -14,6 +14,12 @@
   ~   limitations under the License.
   -->
 
+        <!--
+        This layout uses a CoordinatorLayout to share scrolling information between
+        the NestedScrollView and the AppBarLayout. So, when the NestedScrollView scrolls
+        up it will tell the AppBarLayout about the change. That's how you implement a collapsing
+        toolbar like this on Android - the scrolling of the text will be "coordinated" with the
+        collapsing header.-->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -29,7 +35,9 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/m_eightyone"
                 app:layoutDescription="@xml/step8"
-                app:motionDebug="SHOW_PATH" >
+                app:motionDebug="SHOW_PATH"
+                android:minHeight="80dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
 
             <ImageView
                     android:id="@+id/moon"
@@ -48,7 +56,7 @@
                     android:textColor="?colorOnPrimary" />
         </androidx.constraintlayout.motion.widget.MotionLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    
+
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
