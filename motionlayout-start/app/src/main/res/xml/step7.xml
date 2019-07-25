@@ -19,7 +19,7 @@
              xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- A transition describes an animation via start and end state -->
     <Transition
-            
+
             app:constraintSetStart="@+id/start"
             app:constraintSetEnd="@+id/end"
             app:duration="3000">
@@ -27,9 +27,8 @@
         <!-- Fix OnSwipe by changing touchAnchorSide -->
         <OnSwipe
                 app:touchAnchorId="@id/moon"
-                app:touchAnchorSide="bottom"
+                app:touchAnchorSide="right"
         />
-
 
         <KeyFrameSet>
             <KeyPosition
@@ -98,7 +97,7 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@id/moon"
-            
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
